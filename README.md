@@ -69,6 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 =======
+#### Happy Programmers Day
 # news-react-tailwind
 news client web app w/ ReactJS/TailwindCss
 >>>>>>> 36897fcc7897f8150ce97bf02d631c5c25f4c4d9
