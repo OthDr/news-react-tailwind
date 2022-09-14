@@ -23,18 +23,18 @@ const Navbar = () => {
                 <div className="flex md:flex-row flex-col items-center bg-slate-900 lg:px-12 p-6 ">
 
                     <ul className="mx-auto md:mx-0 md:w-full flex items-center text-amber-500">
-                        <li className="mr-2 font-semibold">General</li>
-                        <li className="mx-2 font-semibold">Politics</li>
-                        <li className="mx-2 font-semibold">Business</li>
-                        <li className="mx-2 font-semibold">Tech</li>
-                        <li className="mx-2 font-semibold">Health</li>
-                        <li className="ml-2 font-semibold">Sports</li>
+                        <li className="mr-2 font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-100">General</li>
+                        <li className="mx-2 font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-100">Politics</li>
+                        <li className="mx-2 font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-100">Business</li>
+                        <li className="mx-2 font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-100">Tech</li>
+                        <li className="mx-2 font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-100">Health</li>
+                        <li className="ml-2 font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-100">Sports</li>
 
                     </ul>
 
-                    <div className="flex items items-center mx-auto mt-4 md:my-0 w-52 sm:w-72 md:w-80 text-amber-400 p-1 rounded-lg border-2 border-amber-400">
-                        <input className='px-1 bg-transparent outline-none w-full text-md text-amber-50' placeholder='search..' type="text" />
-                        <GoSearch className='mx-1' size={20} />
+                    <div className="group flex items items-center mx-auto mt-4 md:my-0 w-[60%] sm:w-80 md:w-96 text-amber-400 p-1 rounded-lg border-2 border-amber-400/30 ">
+                        <input className='px-1 bg-transparent outline-none w-full text-md text-amber-50' placeholder='key word ...' type="text" />
+                        <GoSearch className='mx-1 cursor-pointer hover:scale-110 duration-300 hover:rotate-12 text-amber-400/40 group-hover:text-amber-400' size={20} />
                     </div>
                 </div>
             </div>
