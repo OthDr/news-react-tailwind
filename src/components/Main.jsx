@@ -4,9 +4,9 @@ import Articles from './Articles';
 function Main() {
   return (
     <div className='Main p-2 md:p-6 md:px-12'>
-      <Articles />
-      <Articles />
-      <Articles />
+      <Articles category='business' />
+      <Articles category='health'/>
+      <Articles category='general'/>
     </div>
   );
 }
