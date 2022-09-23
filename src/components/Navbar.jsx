@@ -10,11 +10,11 @@ const Navbar = () => {
                         <span className="text-white bg-amber-500 rounded-md px-1">NEWS</span>
                     </div>
 
-                    <ul className="flex items-center text-md text-slate-500 md:text-lg">
-                        <li className="mx-1 font-semibold hover:text-slate-400">
+                    <ul className="flex items-center text-md text-indigo-600 md:text-lg">
+                        <li className="mx-1 font-semibold hover:text-indigo-400">
                             <a href="/">Sign in</a>
                         </li>
-                        <li className="mx-1  bg-slate-500 rounded-md text-white py-1 px-2 hover:bg-slate-400">
+                        <li className="mx-1  bg-indigo-600 rounded-md text-white py-1 px-2 hover:bg-indigo-500">
                             <a href="/">Sign up</a>
                         </li>
                     </ul>

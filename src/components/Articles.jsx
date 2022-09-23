@@ -8,7 +8,7 @@ const Articles = (props) => {
 
 
     useEffect(() => {
-        const url = 'http://localhost:3001/v2/api/news/category=' + props.category ;
+        const url = 'http://localhost:3001/v2/api/news/category=' + props.category;
         setCategory(props.category);
 
         fetch(url)
@@ -26,18 +26,18 @@ const Articles = (props) => {
             .catch((err) => {
                 console.log(err);
             });
-            
+
 
 
     }, []);
 
     return (
         <>
-            
 
-            <div className='w-full min-h-screen flex flex-col md:flex-row my-2 p-2 py-4  bg-amber-900/5'>
 
-                <h1 className='w-fit h-fit mx-auto text-2xl font-extrabold uppercase text-center mb-4 bg-amber-500/50 rounded-sm text-amber-50 hover:scale-105 duration-200 cursor-pointer'>{category} NEWS</h1>
+            <div className='w-full flex flex-col md:flex-row my-2 p-2 bg-amber-900/5'>
+
+                <h1 className='w-fit h-fit mx-auto text-2xl font-extrabold uppercase text-center mb-4 bg-amber-500/50 rounded-sm text-amber-50 hover:scale-105 duration-200 cursor-pointer p-2'>{category} NEWS</h1>
 
                 {/*Left Big Articles */}
                 <div className='md:w-[60%] flex flex-col items-center'>
@@ -60,35 +60,30 @@ const Articles = (props) => {
 
 
                 {/*Right Articles */}
-                <div className="md:w-[40%] bg-gray-50 text-slate-900 shadow shadow-slate-900/20 p-2" id="side_content">
+                <div className="md:w-[40%] text-slate-900" id="side_content">
 
-                    <div className="flex flex-col items-start  m-1">
-                        <span className="text-sm p-1 md:text-base news-font font-bold">The standard Lorem Ipsum passage</span>
-                        <span className="text-xs p-1 md:text-sm">Samsung humour, or randomised words which don't look even slightly
+                    <div className="flex flex-col items-start  my-2 p-3 bg-white cursor-pointer rounded-sm shadow-md shadow-slate-900/20">
+                        <h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800">The standard Lorem Ipsum passage</h1>
+                        <p className="text-xs p-1 md:text-sm text-slate-900">Samsung humour, or randomised words which don't look even slightly
                             believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</span>
+                            isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</p>
+                    <a href='#' className='text-amber-400 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
                     </div>
 
-                    <div className="flex justify-around my-4">
-                        <span className="nav w-full border-b border-amber-400/50 border-solid mx-3"></span>
-                    </div>
-
-                    <div className="flex flex-col items-start  m-1">
-                        <span className="text-sm p-1 md:text-base news-font font-bold">The standard Lorem Ipsum passage</span>
-                        <span className="text-xs p-1 md:text-sm">Samsung humour, or randomised words which don't look even slightly
+                    <div className="flex flex-col items-start  my-2 p-3 bg-white cursor-pointer rounded-sm shadow-md shadow-slate-900/20">
+                        <h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800">The standard Lorem Ipsum passage</h1>
+                        <p className="text-xs p-1 md:text-sm text-slate-900">Samsung humour, or randomised words which don't look even slightly
                             believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</span>
+                            isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</p>
+                    <a href='#' className='text-amber-400 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
                     </div>
 
-                    <div className="flex justify-around my-4">
-                        <span className="nav w-full border-b border-amber-400/50 border-solid mx-3"></span>
-                    </div>
-
-                    <div className="flex flex-col items-start  m-1">
-                        <span className="text-sm p-1 md:text-base news-font font-bold">The standard Lorem Ipsum passage</span>
-                        <span className="text-xs p-1 md:text-sm">Samsung humour, or randomised words which don't look even slightly
+                    <div className="flex flex-col items-start  my-2 p-3 bg-white cursor-pointer rounded-sm shadow-md shadow-slate-900/20">
+                        <h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800">The standard Lorem Ipsum passage</h1>
+                        <p className="text-xs p-1 md:text-sm text-slate-900">Samsung humour, or randomised words which don't look even slightly
                             believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</span>
+                            isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</p>
+                    <a href='#' className='text-amber-400 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
                     </div>
 
                 </div>
