@@ -25,13 +25,13 @@ const Articles = (props) => {
                 setAll(data);
                 data[1].createdAt = data[1].createdAt.split('T')[0];
                 setFirst(data[1]);
-            }).then((data)=>{
-                console.log(All);
-                setSideArticles(Three(All));
 
+                console.log(All);
+                let three = Three(All);
+                setSideArticles(three);
             })
             .catch((err) => {
-                console.error(err);
+                console.log(err);
             });
 
     }, []);
@@ -43,7 +43,7 @@ const Articles = (props) => {
 
             <div className='w-full my-2 p-2 bg-amber-900/5'>
 
-                <h1 className='w-fit h-fit text-base md:text-2xl font-extrabold uppercase text-center mb-4 border-l-2 text-indigo-500/90 border-indigo-500/90 hover:border-l-8 duration-150 cursor-pointer p-2'>{category} NEWS</h1>
+                <h1 className='w-fit h-fit text-base md:text-2xl font-extrabold uppercase text-center mb-4 border-l-2 text-indigo-500/90 border-indigo-500/90 text-amber-50 hover:border-l-8 duration-150 cursor-pointer p-2'>{category} NEWS</h1>
 
                 {/*Left Big Articles */}
                 <div className='flex flex-col md:flex-row '>
@@ -60,11 +60,6 @@ const Articles = (props) => {
                             </div>
                         }
 
-                    </div>
-
-
-                    {/*Right Articles */}
-                    <div className="md:w-[40%] text-slate-900" id="side_content">
 
                         {sideArticles && sideArticles.map((article) => (
                             <div className="flex flex-col items-start  my-1 md:my-2 p-2 md:p-3 bg-white rounded-sm shadow-md shadow-slate-900/20">
@@ -73,6 +68,36 @@ const Articles = (props) => {
                                 <a href='/' className='text-amber-500/70 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
                             </div>
                         ))}
+
+                    </div>
+
+
+                    {/*Right Articles */}
+                    <div className="md:w-[40%] text-slate-900" id="side_content">
+
+                        <div className="flex flex-col items-start  my-1 md:my-2 p-2 md:p-3 bg-white rounded-sm shadow-md shadow-slate-900/20">
+                            <a href="cursor-pointer"><h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800 hover:text-slate-800/70">The standard Lorem Ipsum passage</h1></a>
+                            <p className="text-xs p-1 md:text-sm text-slate-900">Samsung humour, or randomised words which don't look even slightly
+                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
+                                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</p>
+                            <a href='/' className='text-amber-500/70 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
+                        </div>
+
+                        <div className="flex flex-col items-start  my-1 md:my-2 p-2 md:p-3 bg-white rounded-sm shadow-md shadow-slate-900/20">
+                            <a href="cursor-pointer"><h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800 hover:text-slate-800/70">The standard Lorem Ipsum passage</h1></a>
+                            <p className="text-xs p-1 md:text-sm text-slate-900">Samsung humour, or randomised words which don't look even slightly
+                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
+                                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</p>
+                            <a href='/' className='text-amber-500/70 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
+                        </div>
+
+                        <div className="flex flex-col items-start  my-1 md:my-2 p-2 md:p-3 bg-white rounded-sm shadow-md shadow-slate-900/20">
+                            <a href="cursor-pointer"><h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800 hover:text-slate-800/70">The standard Lorem Ipsum passage</h1></a>
+                            <p className="text-xs p-1 md:text-sm text-slate-900">Samsung humour, or randomised words which don't look even slightly
+                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
+                                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum</p>
+                            <a href='/' className='text-amber-500/70 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>More..</a>
+                        </div>
 
                     </div>
 

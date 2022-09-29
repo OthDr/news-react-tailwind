@@ -7,3 +7,6 @@ const Three = (array) => {
     return arr;
 }
 export default Three;
+
+
+
