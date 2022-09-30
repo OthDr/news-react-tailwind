@@ -1,8 +1,9 @@
 const Three = (array) => {
-    let arr;
+    let arr= [{c:1},{b:2}];
 
-    for (let index = 2; index <= 4; index++) {
+    for (let index = 0; index <= 1; index++) {
         arr[index] = array[index];   
+        console.log(array[index]);
     }
     return arr;
 }
