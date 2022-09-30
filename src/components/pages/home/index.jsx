@@ -9,7 +9,7 @@ const index = () => {
     return (
         <div>
             <Navbar />
-            <Header />
+            <Header /> 
             <Main />
             <Footer />
 
