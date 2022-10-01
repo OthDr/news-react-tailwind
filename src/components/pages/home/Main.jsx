@@ -6,8 +6,9 @@ function Main() {
     <div className='Main p-2 md:p-6 md:px-12'>
       <Articles category='general' />
       <Articles category='business'/>
-      <Articles category='technology'/>
       <Articles category='health'/>
+      <Articles category='science'/>
+      <Articles category='technology'/> 
     </div>
   );
 }

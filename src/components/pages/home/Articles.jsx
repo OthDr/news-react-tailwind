@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Three from '../../../utils/getThree';
+import { Link } from 'react-router-dom';
 
 const Articles = (props) => {
 
     const [sideArticles, setSideArticles] = useState(null);
 
     const [First, setFirst] = useState(null);
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState(null);
 
     
     const url = 'http://localhost:3001/v2/api/news/category=';
@@ -27,7 +28,7 @@ const Articles = (props) => {
                 setFirst(data[0]);
 
                 let three = Three(data);
-                console.log(three);
+                //console.log(three);
 
                 setSideArticles(three);
 
@@ -45,7 +46,7 @@ const Articles = (props) => {
 
             <div className='w-full min-h-screen my-2 p-2 bg-indigo-200/10'>
 
-                <h1 className='w-fit h-fit text-base md:text-2xl font-extrabold uppercase text-center mb-4 border-l-2 text-indigo-500/90 border-indigo-500/90 hover:border-l-8 duration-150 cursor-pointer p-2'>{category} NEWS</h1>
+                <Link to={`/${category}`} className='w-fit h-fit text-base md:text-2xl font-extrabold uppercase text-center mb-4 border-l-2 text-indigo-500/90 border-indigo-500/90 hover:border-l-8 duration-150 cursor-pointer p-2'>{category} NEWS</Link>
 
                 {/*Left Big Articles */}
                 <div className='flex flex-col md:flex-row '>
