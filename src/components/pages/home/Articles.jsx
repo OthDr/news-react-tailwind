@@ -3,16 +3,18 @@ import Three from '../../../utils/getThree';
 
 const Articles = (props) => {
 
-    const [sideArticles, setSideArticles] = useState([]);
+    const [sideArticles, setSideArticles] = useState(null);
 
-    const [First, setFirst] = useState([]);
+    const [First, setFirst] = useState(null);
     const [category, setCategory] = useState('');
 
+    
+    const url = 'http://localhost:3001/v2/api/news/category=';
+
     useEffect(() => {
-        const url = 'http://localhost:3001/v2/api/news/category=' + props.category;
         setCategory(props.category);
 
-        fetch(url)
+        fetch(url+props.category)
             .then(res => {
                 if (!res.ok) {
                     throw Error('Sorry! Could not find the ressource');
@@ -41,13 +43,13 @@ const Articles = (props) => {
     return (
         <>
 
-            <div className='w-full min-h-screen my-2 p-2 bg-indigo-900/5'>
+            <div className='w-full min-h-screen my-2 p-2 bg-indigo-200/10'>
 
                 <h1 className='w-fit h-fit text-base md:text-2xl font-extrabold uppercase text-center mb-4 border-l-2 text-indigo-500/90 border-indigo-500/90 hover:border-l-8 duration-150 cursor-pointer p-2'>{category} NEWS</h1>
 
                 {/*Left Big Articles */}
                 <div className='flex flex-col md:flex-row '>
-                    <div className='md:w-[70%] md:mr-2 flex flex-col items-center bg-slate-900/5'>
+                    <div className='md:w-[70%] md:mr-2 flex flex-col items-center bg-slate-600/5'>
 
                         {First &&
                             <div className="w-[90%] flex flex-col items-start ">
@@ -67,7 +69,7 @@ const Articles = (props) => {
 
                     <div className="md:w-[30%] text-slate-900" id="side_content">
                         {sideArticles && sideArticles.map((article, i) => (
-                            <div key={i} className="flex flex-col items-start  my-1 md:my-2 p-2 md:p-3 bg-white rounded-sm shadow-md shadow-slate-900/20">
+                            <div key={i} className="flex flex-col items-start  my-2 md:my-0 p-2 md:p-3 bg-white rounded-sm shadow-md shadow-slate-900/20">
                                 <a href="cursor-pointer"><h1 className="text-sm p-1 md:text-base news-font font-bold text-slate-800 hover:text-slate-800/70">{article.title}</h1></a>
                                 <p className="text-xs p-1 md:text-sm text-slate-900">{article.content.substring(0, 400)} <a href='/' className='text-amber-500/70 text-sm md:text-base font-bold cursor-pointer p-1 hover:text-amber-500'>..More</a>
                                 </p>
