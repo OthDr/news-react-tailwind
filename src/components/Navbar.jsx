@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 import { GoSearch } from 'react-icons/go'
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+
     return (
         < >
             <div className='shadow-md '>
@@ -33,13 +35,13 @@ const Navbar = () => {
             <div className="w-full flex lg:flex-row flex-col items-center bg-slate-900 py-4 md:p-6 ">
 
                 <ul className="mx-auto lg:ml-[10%] lg:w-full flex items-center text-indigo-500">
-                    <li className="mr-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/general'>General</Link></li>
-                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/business'>Business</Link></li>
-                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/health'>Health</Link></li>
-                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/science'>Science</Link></li>
-                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/technologie'>Tech</Link></li>
-                    <li className="ml-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/sports'>Sports</Link></li>
-                    <li className="ml-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/entertaiment'>entertaiment</Link></li>
+                    <li className="mr-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/general' onClick={handleClick => props.category = 'general'}>General</Link></li>
+                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/business' onClick={handleClick => props.category = 'business'}>Business</Link></li>
+                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/health' onClick={handleClick => props.category = 'health'}>Health</Link></li>
+                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/science' onClick={handleClick => props.category = 'science'}>Science</Link></li>
+                    <li className="mx-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/technologie' onClick={handleClick => props.category = 'technologie'}>Tech</Link></li>
+                    <li className="ml-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/sports' onClick={handleClick => props.category = 'sports'}>Sports</Link></li>
+                    <li className="ml-1 text-xs sm:text-base font-semibold hover:border-b-2 border-amber-500 cursor-pointer duration-50 "><Link to='/entertaiment' onClick={handleClick => props.category = 'entertaiment'}>entertaiment</Link></li>
                 </ul>
 
                 <div className="group flex items items-center mx-auto mt-4 lg:my-0 lg:mr-[10%] sm:w-80 lg:w-[630px] text-amber-400 p-1 lg:p-2 bg-slate-200/10 rounded-sm lg:rounded hover:bg-slate-200/5 duration-200">

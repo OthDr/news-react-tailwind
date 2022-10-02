@@ -44,12 +44,12 @@ const Articles = (props) => {
     return (
         <>
 
-            <div className='w-full min-h-screen my-2 p-2 bg-indigo-200/10'>
+            <div className='w-full min-h-screen my-2 p-4 bg-indigo-200/10'>
 
-                <Link to={`/${category}`} className='w-fit h-fit text-base md:text-2xl font-extrabold uppercase text-center mb-4 border-l-2 text-indigo-500/90 border-indigo-500/90 hover:border-l-8 duration-150 cursor-pointer p-2'>{category} NEWS</Link>
+                <Link to={`/${category}`} className='w-fit text-base md:text-2xl font-extrabold uppercase text-center border-l-2 text-indigo-500/90 border-indigo-500/90 hover:border-l-8 duration-150 cursor-pointer p-2 my-2'>{category} NEWS</Link>
 
                 {/*Left Big Articles */}
-                <div className='flex flex-col md:flex-row '>
+                <div className='flex flex-col md:flex-row mt-4'>
                     <div className='md:w-[70%] md:mr-2 flex flex-col items-center bg-slate-600/5'>
 
                         {First &&
