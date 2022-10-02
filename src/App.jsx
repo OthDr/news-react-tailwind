@@ -5,7 +5,7 @@ import Home from './components/pages/home/index';
 import SignIn from './components/pages/auth/Signin';
 import SignUp from './components/pages/auth/Signup';
 import Profile from './components/pages/profile/index';
-import ArticlesPage from './components/pages/articlesPage/CategoryArticles';
+import CategoryArticles from './components/pages/articlesPage/CategoryArticles';
 
 function App() {
 
@@ -20,15 +20,15 @@ function App() {
                 <Route path='/signup' element={<SignUp/>} />
                 <Route path='/signin' element={<SignIn/>} />
 
-                <Route path='/general' element={<ArticlesPage/>} category='general'/>
-                <Route path='/business' element={<ArticlesPage/>} category='business'/>
-                <Route path='/health' element={<ArticlesPage/>} category='health'/>
-                <Route path='/entertaiment' element={<ArticlesPage/>} category='entertaiment'/>
-                <Route path='/science' element={<ArticlesPage/>} category='science'/>
-                <Route path='/sports' element={<ArticlesPage/>} category='sports'/>
-                <Route path='/technologie' element={<ArticlesPage/>} category='technologie'/>
+                <Route path='/general' element={<CategoryArticles category='general'/>} />
+                <Route path='/business' element={<CategoryArticles category='business'/>} />
+                <Route path='/health' element={<CategoryArticles category='health'/>} />
+                <Route path='/entertaiment' element={<CategoryArticles category='entertaiment'/>} />
+                <Route path='/science' element={<CategoryArticles category='science'/>} />
+                <Route path='/sports' element={<CategoryArticles category='sports'/>} />
+                <Route path='/technologie' element={<CategoryArticles category='technologie'/>} />
 
-                <Route path={`/${category}`} element={<ArticlesPage/>} category={category}/>
+                <Route path={`/${category}`} element={<CategoryArticles category={category}/>} />
             </Routes>
 
         </div>
