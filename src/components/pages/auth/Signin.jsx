@@ -29,7 +29,7 @@ const Signin = () => {
 
           <div className="w-[90%] group mx-auto mt-2 flex items items-center p-2 bg-stone-50/5 rounded-md">
             <GoLock className='mx-2 cursor-pointer group-hover:scale-110 duration-500 text-stone-50/40 group-hover:text-indigo-400 ' size={25} />
-            <input className='outline-none w-full text-sm sm:text-base  p-1 text-indigo-400 rounded-md bg-transparent placeholder:text-stone-50/80' placeholder='password' type="text" />
+            <input className='outline-none w-full text-sm sm:text-base  p-1 text-indigo-400 rounded-md bg-transparent placeholder:text-stone-50/80' placeholder='password' type="password" />
           </div>
 
           <div className='w-full flex '>
