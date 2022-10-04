@@ -5,7 +5,7 @@ import Main from './Main'
 import Footer from './Footer';
 
 
-const index = () => {
+const index = (props) => {
     return (
         <div>
             <Navbar />

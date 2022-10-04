@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import Three2 from '../../../utils/getThree2';
 
-const Header = () => {
+const Header = (props) => {
     const [GridArticles, setGridArticles] = useState(null);
 
     const url = 'http://localhost:3001/v2/api/news';
